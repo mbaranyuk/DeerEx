@@ -1,0 +1,21 @@
+<ion-view>
+	<div class="bar bar-header">
+		<button class="button button-icon icon ion-android-menu" ng-click="openMenu()"></button>
+		<button ng-if="income && income.length > 0" class="button button-icon icon ion-android-funnel" ng-click="openFilterPopup()"></button>
+	</div>
+
+	<h1 class="center white wallet-total" style="margin-top: 40px; font-weight: 100;">{{total}}</h1>
+
+	<p ng-if="!income || income.length == 0" class="center grey" translate>no-wallet-desc</p>
+
+	<ion-content class="wallet" scroll="true" style="top: 100px;">
+		<div ng-if="income && income.length > 0" class="card" style="margin-top: 0;">
+			<div class="item custom-item" ng-repeat="i in income">
+				<h2>{{i.date}}</h2>
+				<span class="grey" style="font-size: 14px;" translate="wallet-deliveries" translate-value="{{i.deliveries}}"></span>
+				<span class="item-note balanced">{{i.sum}}</span>
+			</div>
+		</div>
+	</ion-content>
+
+</ion-view>

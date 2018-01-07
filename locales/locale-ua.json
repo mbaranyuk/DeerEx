@@ -1,0 +1,87 @@
+{
+	"auth-btn": "Далі",
+	"auth-desc": "Нам потрібен ваш номер телефону, щоб перевірити вас і відправити вам важливі повідомлення.",
+	"auth-agrrement": "Натискаючи кнопку \"Далі\", я приймаю умови <a href=\"#\">угоди користувача</a>",
+
+	"auth-confirm-btn": "Відправити",
+	"confirm-desc": "Для підтвердження номера толефону введіть<br>код із смс",
+	"confirm-resend": "Відправити SMS ще раз",
+
+	"nick-btn": "Зберегти",
+	"nick-desc": "Для реєстрації введіть своє ім'я та e-mail.",
+
+	"no-orders-desc:": "У вас немає жодних замовлень. <br>Створіть нове, натиснувши кнопку нижче",
+	"no-orders-btn": "Нове замовлення",
+
+	"orders-title": "Мої замовлення",
+
+	"size-title": "Вкажіть розмір",
+	"size-0": "Коробка",
+	"size-0-desc": "<b>3kg max.</b> L30 x W25 x H10 cm",
+	"size-1": "Мотоцикл",
+	"size-1-desc": "<b>6kg max.</b> L60 x W45 x H45 cm",
+	"size-2": "Автомобіль",
+	"size-2-desc": "<b>50kg max.</b> L100 x W100 x H75 cm",
+	"size-3": "Вантажівка",
+	"size-3-desc": "<b>150kg max.</b> L133 x W133 x H133 cm",
+
+	"new-order-title": "Нове",
+	"edit-order-title": "Редагувати",
+
+	"order-cancel": "Відмінити",
+	"order-save": "Зберегти",
+	"order-from": "Звідки",
+	"order-to": "Куди",
+	"order-size": "Розмір",
+	"order-comment": "Коментар",
+
+	"address-form-placeh": "Введіть адресу, місце або ZIP код",
+
+	"comment-placeh": "Всавте коментар тут",
+	"comment-btn": "Додати коментар",
+
+	"finish-desc": "Ваша заявка прийнята. <br> Очікуйте на повідомлення про отримання замовлення кур'єром.",
+	"finish-call": "Телефонуйте <b class=\"balanced\">{{name}}</b> щодо деталей.",
+	"finish-share-title": "Виберіть застосунок",
+
+	"no-internet-desc": "Здається, немає підключення до Інтернету :(",
+	"no-internet-btn": "Перезавантажити",
+
+	"menu-logout": "Вихід",
+	"menu-phone": "Телефон",
+	"menu-lang": "Мова",
+	"menu-orders": "Замовлення",
+	"menu-wallet": "Гаманець",
+	"menu-leaderboard": "Рейтинг",
+	"menu-support": "Підтримка",
+	"menu-about": "Про програму",
+	"menu-mode": "Режим кур'єра",
+
+	"c-processing": "Виконуються",
+	"c-nearest": "Найближчі",
+	"c-no-orders-desc": "У вас немає жодних замовлень.",
+
+	"no-wallet-desc": "У вас немає жодних завершених доставок.",
+	"wallet-deliveries": "{{count}} доставок",
+
+	"back-btn": "Назад",
+	"edit-btn": "Редагувати",
+	"accept-btn": "Прийняти",
+	"done-btn": "Доставлено",
+	"direct-title": "Напрямок",
+	"size-title2": "Розмір",
+	"cost-title": "Ціна",
+	"delete-btn": "Видалити",
+	"decline-btn": "Відхилити",
+	"share-btn": "Поділитися",
+
+	"d-confirm-title": "Ви впевнені?",
+	"d-confirm-y": "Так",
+	"d-confirm-n": "Ні",
+
+	"splash-title": "Хто ти?",
+	"splash-1": "Користувач",
+	"splash-1-desc": "",
+	"splash-2": "Кур'єр",
+	"splash-2-desc": ""
+}

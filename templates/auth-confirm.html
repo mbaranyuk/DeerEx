@@ -1,0 +1,22 @@
+<ion-view>
+	<ion-content scroll="false" class="has-header">
+		<div class="card">
+
+			<label class="item item-input list list-inset">
+				<input focus-me type="tel" ng-model="number">
+			</label>
+			<p class="center"><strong>You are in test mode.</strong> Test code is <strong>0000</strong></p>
+			<br>
+
+			<p class="center big-padding" translate>confirm-desc</p>
+			<br>
+			<a ng-if="err" class="center" ng-click="resendSMS()" translate>confirm-resend</a>
+			<br>
+
+			<button class="item button button-block button-custom" ng-disabled="!number"
+			ng-click="doConfirm(number)" translate>
+				auth-confirm-btn
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

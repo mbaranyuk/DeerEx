@@ -1,0 +1,14 @@
+<ion-view>
+	<ion-content scroll="true">
+		<div class="card">
+			<p class="comment-input-placeholder" ng-if="!comment" translate>comment-placeh</p>
+			<div contenteditable focus-me ng-model="comment" class="comment-input"></div>
+
+			<center>
+				<button class="button" ng-disabled="!comment" ng-click="addComment(comment)" translate>
+					comment-btn
+				</button>
+			</center>
+		</div>
+	</ion-content>
+</ion-view>

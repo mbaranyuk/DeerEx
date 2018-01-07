@@ -1,0 +1,30 @@
+<ion-view>
+	<div class="bar bar-header">
+		<button ng-if="!me.isCourier" class="button button-icon icon ion-android-close" style="color: #fff;" ui-sref="app.orders"></button>	
+		<button ng-if="me.isCourier" class="button button-icon icon ion-android-close" style="color: #fff;" ui-sref="app.courier-orders"></button>
+		<div class="title"></div>
+		<button class="button button-clear" ng-click="share()" translate>share-btn</button>	
+	</div>
+
+	<ion-content scroll="false" class="has-header">
+
+		<div class="card">
+			<br>
+	    	<center><i class="icon ion-checkmark-circled balanced" style="font-size: 64px;"></i></center>
+	    	<br>
+
+			<div class="padding">
+				<p class="center" translate>finish-desc</p>	
+
+				<div ng-if="user && user.name">
+					<br>
+					<a ng-href="tel:{{user.phone}}" translate="finish-call" translate-values="{{user.name}}"></a>
+					<br>
+				</div>
+
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
+

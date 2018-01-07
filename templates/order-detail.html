@@ -1,0 +1,97 @@
+<ion-view>
+  <div class="bar">
+    <button ng-if="!me.isCourier" class="button icon-left ion-ios-arrow-left button-clear" ui-sref="app.orders" translate>back-btn</button>
+    <button ng-if="me.isCourier" class="button icon-left ion-ios-arrow-left button-clear" ui-sref="app.courier-orders" translate>back-btn</button>
+    <button ng-if="!me.isCourier" class="button button-clear" ng-click="editOrder()" translate>edit-btn</button>
+    <button ng-if="(order.status == 0) && me.isCourier" class="button button-clear" ng-click="acceptOrder()" translate>accept-btn</button>
+    <button ng-if="me.isCourier && order.status == 1" class="button button-clear" ng-click="declineOrder()" translate>decline-btn</button>
+  </div>
+
+  <ion-content class="has-header" scroll="true">
+
+    <div class="card">
+      <ng-map class="order-map item"
+        maximum-zoom="11"
+        center="{{order.from}}"
+        scrollwheel="false"
+        zoom-to-include-markers="true" 
+        disable-default-u-i="true">
+        <directions
+          draggable="false"
+          travel-mode="DRIVING"
+          origin="{{order.from}}"
+          destination="{{order.to}}">
+        </directions>
+        <marker ng-if="delivery.location" 
+          position="{{delivery.location.latitude}}, {{delivery.location.longitude}}" 
+          icon="{{delivery.icon}}" title="delivery">
+        </marker>
+      </ng-map>
+
+      <div class="detail-drag"><i class="icon ion-drag grey"></i></div>
+
+      <div ng-if="order.status == 1 || order.status == 2">
+        <div class="item item-avatar item-icon-right" href="#">
+          <img src="img/venkman.jpg">
+          <h2>{{order.user.nick}}</h2>
+          <p class="firm-color">
+            <span ng-repeat="i in [1,2,3,4,5]">
+              <i ng-if="i <= order.user.raiting || order.user.raiting == 0">&star;</i>
+              <i ng-if="order.user.raiting > 0 && i > order.user.raiting">&starf;</i>
+            </span>
+          </p>
+          <a ng-if="order.status == 1" ng-href="tel:{{order.user.phone}}" class="button button-icon icon ion-ios-telephone" style="color: #efa918;"></a>
+        </div>
+
+        <div class="hr"></div>
+      </div>
+
+      <center><h5 class="grey" translate>direct-title</h5></center>
+      <div class="inline-bar">
+        <h3 class="inline">{{order.from | endStr}}</h3>
+        <div class="inline"><i class="icon ion-android-arrow-forward royal"></i></div>
+        <h3 class="inline">{{order.to | endStr}}</h3>
+      </div>
+
+      <center> 
+        <h5 class="grey" translate>size-title2</h5> 
+
+        <div>
+          <i class="icon royal" 
+          ng-class="{'ion-android-walk': order.size==1, 'ion-android-bicycle': order.size==1, 'ion-android-car': order.size==3, 'ion-android-bus': order.size==4}"
+          style="font-size: 24px;"></i>
+          <p ng-bind-html="'size-'+order.size+'-desc' | translate"></p>
+        </div>
+      </center>
+
+      <ion-slides ng-if="order.images && order.images.length > 0" slider="data.slider" class="order-images" style="height: 200px;">
+        <ion-slide-page ng-repeat="img in order.images">
+          <img http-src="{{apiBase}}getImage?id={{img}}">
+        </ion-slide-page>
+      </ion-slides>
+
+      <div ng-if="order.comment">
+        <center><h5 class="grey" translate>order-comment</h5></center>
+        <p class="order-comment big-padding" ng-bind-html="order.comment">
+        </p>
+      </div>
+
+      <center>
+        <h5  class="grey" translate>cost-title</h5>
+        <h4>{{order.price}}</h4>
+      </center>
+
+      <br>
+
+      <button ng-if="!me.isCourier" class="item button button-full button-assertive" ng-click="deleteOrder()" translate>
+        delete-btn
+      </button>
+
+      <button ng-if="(order.status == 1) && me.isCourier" class="item button button-full button-custom" ng-click="doneOrder()" translate>
+        done-btn
+      </button>
+
+    </div>
+
+  </ion-content>
+</ion-view>

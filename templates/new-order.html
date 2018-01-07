@@ -1,0 +1,54 @@
+<ion-view>
+  <div class="bar">
+    <button class="button button-clear" ng-click="cancel()" translate>order-cancel</button>
+    <div class="title">{{title | translate}}</div>
+    <button class="button button-clear" ng-click="save()" translate>order-save</button>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="card">
+        <i ng-if="!editing" class="icon ion-android-camera order-img-add" ng-if="!images || images.length < 5" ng-click="attachImg()"></i>
+
+        <ion-slides ng-if="!editing" slider="data.slider" class="order-images">
+          <ion-slide-page ng-repeat="img in images">
+            <div class="img-delete-btn" ng-click="deleteImg($index)">&#10006;</div>
+            <img ng-src="{{img}}">
+          </ion-slide-page>
+        </ion-slides>
+
+      <div class="row row-center no-padding">
+        <div class="col">
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="from">
+            <h2 ng-if="!order.from" translate>order-from</h2>
+            <div ng-if="order.from">
+              <h1 ng-bind="order.from | endStr"></h1>
+              <p ng-bind="order.from | startStr"></p>
+            </div>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="to">
+            <h2 ng-if="!order.to" translate>order-to</h2>
+            <div ng-if="order.to">
+              <h1 ng-bind="order.to | endStr"></h1>
+              <p ng-bind="order.to | startStr"></p>
+            </div>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="size">
+            <h2 ng-if="!order.size" translate>order-size</h2>
+            <h1 ng-if="order.size">{{'size-'+order.size | translate}}</h1>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center text-trim" ui-sref="comment">
+            <h2 ng-if="!order.comment" translate>order-comment</h2>
+            <h2 ng-if="order.comment" ng-bind="order.comment | escapeHtml"></h2>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </ion-content>
+</ion-view>

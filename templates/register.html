@@ -1,0 +1,24 @@
+<ion-view>
+
+	<ion-content scroll="false" class="has-header">
+		<div class="card">
+			<label class="item item-input list list-inset">
+				<input focus-me type="text" ng-model="nick" placeholder="John Doe">
+			</label>
+
+			<br>
+
+			<label class="item item-input list list-inset">
+				<input type="text" ng-model="mail" placeholder="example@mail.com">
+			</label>
+
+			<p class="big-padding center" translate>nick-desc</p>
+			<br>
+			
+			<button class="item button button-block button-custom" ng-disabled="!nick || !mail"
+			ng-click="register(nick, mail)" translate>
+				nick-btn
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

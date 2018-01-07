@@ -1,0 +1,18 @@
+<ion-view>
+	<ion-content scroll="false" class="has-header">
+		<div class="card">
+			<label class="item item-input list list-inset">
+				<input type="tel" focus-me ng-minlength="9" ng-maxlength="12"
+				maxlength="12"
+				ng-model="phone" placeholder="Phone (e.g. 572243410)" required>
+			</label>
+			<p class="center big-padding" translate>auth-desc</p>
+			<br>
+
+			<button class="item button button-block button-custom" ng-disabled="!phone"
+			ng-click="doAuth(phone)" translate>
+				auth-btn
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

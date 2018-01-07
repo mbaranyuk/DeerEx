@@ -1,0 +1,25 @@
+<ion-view>
+	<div class="bar bar-header">
+		<button class="button button-icon icon ion-android-close" style="color: #fff;" ng-click="goBack()"></button>	
+	</div>
+
+	<ion-content scroll="false" class="has-header">
+		
+		<div class="row row-center no-padding" style="height: 90%;">
+			<div style="width: 100%; text-align: center;" ng-if="!isRated">
+				<img src="img/venkman.jpg">
+				<p>{{courier.name}}</p>
+				<br><br><br>
+				<i class="icon"
+					ng-repeat="i in [1,2,3,4,5]" 
+					ng-class="{'ion-android-star': i <= raiting, 'ion-android-star-outline': i > raiting}" 
+					ng-click="setRate(i);"></i>
+				<br>
+				<button class="button " ng-click="rateCourier()">Rate courier</button>
+			</div>
+
+			<p ng-if="isRated">Thancks for your rate!</p>
+		</div>
+
+	</ion-content>
+</ion-view>

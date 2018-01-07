@@ -1,0 +1,57 @@
+<ion-view>
+  <div class="bar">
+    <button class="button button-small button-clear">Cancel</button>
+    <div class="title">Add new order</div>
+  </div>
+
+  <ion-content scroll="false">
+    <div class="card">
+      <i class="icon ion-android-camera order-img-add" ng-if="!images || images.length < 5" ng-click="addNewImg()"></i>
+      <div class="black-subbutton-wrap" ng-if="!images"><span class="black-subbutton">You need to add photo</span></div>
+
+      <ion-slides slider="data.slider" class="order-images" id="images">
+        <ion-slide-page ng-repeat="img in images">
+          <img  ng-src="{{img}}" style="width: 100%; height: 100%; object-fit: cover;">
+        </ion-slide-page>
+      </ion-slides>
+
+      <div class="row row-center no-padding" style="height: 60%;">
+        <div class="col">
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="from">
+            <h2 ng-if="!order.from">From</h2>
+            <div ng-if="order.from">
+              <h1 ng-bind="order.from | endStr"></h1>
+              <p ng-bind="order.from | startStr"></p>
+            </div>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="to">
+            <h2 ng-if="!order.to">To</h2>
+            <div ng-if="order.to">
+              <h1 ng-bind="order.to | endStr"></h1>
+              <p ng-bind="order.to | startStr"></p>
+            </div>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center" ui-sref="size">
+            <h2 ng-if="!order.size">Size</h2>
+            <h1 ng-if="order.size" ng-bind="order.size"></h1>
+          </div>
+
+          <div class="item item-text-wrap custom-item text-center text-trim" ui-sref="comment">
+            <h2 ng-if="!order.comment">Comment</h2>
+            <h1 ng-if="order.comment" ng-bind="order.comment | escapeHtml"></h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+  </ion-content>
+
+  <!-- <div class="bar bar-footer bar-custom" ng-click="doOrder()">
+    <div class="title">Order</div>
+  </div> -->
+  <button class="button button-full button-custom button-footer" ng-click="doOrder()">Order</button>
+</ion-view>

@@ -1,0 +1,254 @@
+/* Empty. Add your own CSS if you like */
+.bar {
+	border: none !important;
+	background-image: none !important;
+	background: transparent;
+}
+
+.bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
+	font-size: 20px !important;
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.hr {
+	width: 100%;
+	height: 1px;
+	background-color: #f5f5f5;
+}
+
+.big-padding {
+	padding: 0 10%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.grey, .grey:before {
+	color: #BEBEBE !important;
+}
+
+.center {
+	text-align: center;
+}
+
+.button-custom, .bar-custom {
+	border-radius: 0;
+	background-color: #efa918;
+	color: #fff;
+}
+.button-custom:after {
+	display: none;
+}
+.button-custom:hover {
+	color: #fff;
+}
+.button-custom:active, .button-custom .activated, .button-custom.button.activated {
+	background-color: #efa918;
+	border-color: #efa918;
+	opacity: 0.8;
+}
+
+.button-smaller {
+	min-width: 28px;
+    min-height: 35px;
+    line-height: 24px;
+}
+.button-smaller .icon:before, .button-smaller.icon:before, .button-smaller.icon-left:before, .button-smaller.icon-right:before {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 3px;
+}
+
+.fab-bottom {
+	position: absolute;
+	width: 100%;
+	bottom: 22px;
+	text-align: center;
+}
+.fab .button, .fab-bottom .button {
+	border-radius: 50px;
+}
+
+.center-pick {
+	position: relative;
+	top: 20%;
+}
+
+.google-place-icon:before{
+	color: black; 
+	padding-right: 9px !important;
+	font-size: 20px !important;
+}
+
+.custom-item {
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	margin: 0;
+}
+.custom-item h1, h1.custom-item {
+	font-size: 28px;
+	font-weight: 200;
+}
+
+.order-images {
+	width: 100%;
+	height: 30vh;
+	background-color: rgba(0,0,0, 0.9);
+}
+
+.order-img-add {
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    top: 10vh;
+    margin-top: -13px;
+    left: 50%;
+    margin-left: -25px;
+    display: block;
+    font-size: 26px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    z-index: 2;
+}
+.order-img-add:before {
+	position: relative;
+    top: 11px;
+}
+.order-img-add:active {
+	opacity: 0.8;
+}
+
+.black-subbutton-wrap {
+	position: absolute;
+	width: 100%;
+	top: 20vh;
+	text-align: center;
+	z-index: 1;
+}
+.black-subbutton {
+	font-size: 12px;
+	padding: 2px 10px;
+	background-color: #000;
+	border-radius: 30px;
+	color: #fff;
+	z-index: 2;
+}
+
+.comment-input {
+	width: 100%;
+	min-height: 52px;
+	padding: 16px;
+	word-wrap: break-word;
+}
+.comment-input-placeholder {
+	display: block;
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	color: #BEBEBE;
+	z-index: -1;
+}
+
+.text-trim, .text-trim h1 {
+	//max-width: 70%;
+	margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;(...)
+}
+
+.order-map {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 100vh;
+	min-width: 100%;
+}
+
+.order-details {
+	background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    margin-top: -148px;
+}
+.order-details .card {
+	padding-bottom: 0;
+}
+
+.icon-circled:before {
+	font-size: 20px;
+    width: 30px !important;
+    padding: 5px;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.icon-circled-black:before {
+	background-color: #000;
+}
+.icon-circled-green:before {
+	background-color: #0dd13b;
+}
+.icon-circled-blue:before {
+	background-color: #14a5ec;
+}
+
+
+.slider-pager .slider-pager-page {
+	color: #fff !important;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.firm-color {
+	color: #efa918 !important;
+}
+
+.bonus-price:before {
+	font-family: "Ionicons";
+	content: "\f120";
+	color: #0dd13b;
+	padding-right: 5px;
+} 
+
+.finish-logo {
+	background-color: rgba(0,0,0,0.9);
+	height: 30vh;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: auto 60%;
+}
+.finish-sign {
+	font-size: 30px;
+    position: absolute;
+    margin-top: -14px;
+    margin-left: -12px;
+    color: #0dd13b;
+    z-index: 2;
+}
+.finish-sign-bg {
+	display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -16px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+}

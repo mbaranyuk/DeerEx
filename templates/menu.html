@@ -1,0 +1,60 @@
+<ion-view>
+  <div class="bar" style="background-color: #fff;">
+    <button class="button button-icon icon ion-android-close black" ng-click="closeMenu()"></button>
+    <div class="title black">DODAY</div>
+    <button class="button button-clear black" ng-click="doLogout()" translate>menu-logout</button>
+  </div>
+
+  <ion-content id="menu" class="has-header" scroll="true" style="background-color: #fff;">
+    <div class="item item-divider"></div>
+
+    <div class="item">
+      <h1 ng-if="!newPhone" translate>menu-phone</h1>
+      <h1 ng-if="newPhone" style="color: #efa918;" ng-click="setPhone(newPhone)" translate>order-save</h1>
+      <input ng-model="newPhone" type="tel" class="item-note" placeholder="{{me.phone}}">
+    </div>
+
+    <div class="item" ng-click="changeLanguage()">
+      <h1 translate>menu-lang</h1>
+    </div>
+
+    <div class="item item-divider"></div>
+
+    <div ng-if="me && me.isCourier">
+      <div class="item" ui-sref="app.courier-orders">
+        <h1 translate>menu-orders</h1>
+      </div>
+
+      <div class="item" ui-sref="app.wallet">
+        <h1 translate>menu-wallet</h1>
+      </div>
+
+      <div class="item" ui-sref="app.leaderboard">
+        <h1 translate>menu-leaderboard</h1>
+      </div>
+
+      <div class="item item-divider"></div>
+    </div>
+
+    <div class="item">
+      <h1 translate>menu-support</h1>
+    </div>
+    <div class="item">
+      <h1 translate>menu-about</h1>
+    </div>
+
+    <div class="item item-divider"></div>
+
+    <div class="item item-toggle">
+      <h1 translate>menu-mode</h1>
+
+      <label class="toggle toggle-balanced">
+       <input type="checkbox" ng-checked="me && me.isCourier" ng-click="toggleMode()">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+    </div>
+
+  </ion-content>
+</ion-view>

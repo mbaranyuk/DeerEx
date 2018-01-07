@@ -1,0 +1,16 @@
+<ion-view>
+	<div class="card">
+		<div class="google-place-icon button button-icon icon ion-close-circled grey" ng-click="clearSearch()"></div>
+		<label class="item-input" style="height: 58px; line-height: 58px;">
+	    	<input id="q_input" type="search" name="" ng-model="searchQuery"
+	    	ng-change="watchSearch(searchQuery)" placeholder="{{'address-form-placeh' | translate}}" focus-me>
+	    	<div></div>
+	    </label>
+	</div>
+	<ion-content ng-if="searchQuery" id="address-list" class="card" scroll="false">
+		<div class="item item-icon-right item-text-wrap custom-item"  ng-repeat="location in locations" ng-click="selectLocation(location)">
+            {{location.description}}
+			<i class="icon ion-ios-arrow-right grey"></i>
+        </div>
+	</ion-content>
+</ion-view>

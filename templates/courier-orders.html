@@ -1,0 +1,40 @@
+<ion-view>
+	<div class="bar bar-header has-tabs-top">
+		<button class="button button-icon icon ion-android-menu" ng-click="openMenu()"></button>
+		<div class="title" translate>menu-orders</div>
+		<button ng-if="orders.length !== 0" class="button button-icon icon ion-android-funnel" ng-click="openFilterPopup()"></button>
+	</div>
+	
+	<ion-tabs class="tabs-striped tabs-top" delegate-handle="myTabs">
+		<ion-tab title="{{'c-processing' | translate}}" ng-click="myOrders()"></ion-tab>
+		<ion-tab title="{{'c-nearest' | translate}}" ng-click="nearestOrders()"></ion-tab>			
+	</ion-tabs>
+
+	<div class="row row-center no-padding has-header" ng-if="noOrders" style="height: 80%; position: absolute;">
+		<div style="width: 100%; text-align: center;">
+			<i class="icon ion-information-circled grey" style="font-size: 36px;"></i>
+			<br><br>
+			<p class="grey center" translate>c-no-orders-desc</p>
+		</div>
+	</div>
+
+	<ion-content scroll="true" style="top: 109px;">
+		<ion-refresher
+		    pulling-text="Pull to refresh..."
+		    spinner="none"
+		    on-refresh="doRefresh()">
+		</ion-refresher>
+
+		<div class="card grid-item" ng-repeat="o in orders | filter: {size: filter}" ui-sref="courier-order-detail({id: o.id})">
+			<div class="item item-image">
+			    <img ng-if="o.image" http-src="{{apiBase}}getImage?id={{o.image}}">
+			    <img ng-if="!o.image" src="img/logo.png">
+			</div>
+			<div class="item item-icon-left">
+				<i class="icon ion-record" ng-style="{color: o.status == 0 ? '#33cd5f' : o.status == 1 ? 'orange' : '#ef473a'}"></i>
+				<h2>{{'size-'+o.size | translate}}</h2>
+				<p ng-bind-html="'size-'+o.size+'-desc' | translate"></p>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

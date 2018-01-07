@@ -1,0 +1,35 @@
+<ion-view>
+  <div class="bar bar-header">
+    <div class="title" translate>splash-title</div>
+  </div>
+
+  <ion-content scroll="false">
+
+    <div class="row row-center no-padding" style="height: 100%;">
+      <div class="col no-padding">
+
+        <div class="card" ng-click="setRole(0)" ui-sref="app.auth">
+          <div class="item item-image">
+          	<img src="img/user.png">
+          </div>
+          <div class="item item-text-wrap custom-item text-center">
+            <h1 translate>splash-1</h1>
+            <p translate>splash-1-desc</p>
+          </div>
+        </div>
+
+        <div class="card" ng-click="setRole(1)" ui-sref="app.auth">
+          <div class="item item-image">
+          	<img src="img/delivery.png">
+          </div>
+          <div class="item item-text-wrap custom-item text-center">
+            <h1 translate>splash-2</h1>
+            <p translate>splash-2-desc</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>

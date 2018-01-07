@@ -1,0 +1,92 @@
+{
+	"auth-btn": "Next",
+	"auth-desc": "We need your phone number to verify you and send you important messages.",
+	"auth-agrrement": "By pressing \"Next\" button, I accept <a href=\"#\">the User Agreement</a>",
+
+	"auth-confirm-btn": "Send",
+	"confirm-desc": "To verify your phone <br> enter code from sms",
+	"confirm-resend": "Send SMS one more time",
+
+	"nick-btn": "Save",
+	"nick-desc": "To register, enter your name and e-mail.",
+
+	"no-orders-desc": "You have no orders. <br>Create new by pressing button below",
+	"no-orders-btn": "New order",
+
+	"orders-title": "My orders",
+
+	"size-title": "Set size",
+	"size-1": "Bicicle",
+	"size-1-desc": "<b>3kg max.</b> L30 x W25 x H10 cm",
+	"size-2": "Motorcicle",
+	"size-2-desc": "<b>6kg max.</b> L60 x W45 x H45 cm",
+	"size-3": "Car",
+	"size-3-desc": "<b>50kg max.</b> L100 x W100 x H75 cm",
+	"size-4": "Van",
+	"size-4-desc": "<b>150kg max.</b> L133 x W133 x H133 cm",
+
+	"new-order-title": "New",
+	"edit-order-title": "Edit",
+
+	"order-cancel": "Cancel",
+	"order-save": "Save",
+	"order-from": "From",
+	"order-to": "To",
+	"order-size": "Size",
+	"order-comment": "Comment",
+
+	"address-form-placeh": "Enter address, location or ZIP code",
+
+	"comment-placeh": "Insert comment here",
+	"comment-btn": "Add comment",
+
+	"finish-desc": "Your application is accepted. <br> Expect to notices of receipt of the order by courier.",
+	"finish-call": "Call <b class=\"balanced\">{{name}}</b> for details.",
+	"finish-share-title": "Choose app",
+
+	"no-internet-desc": "It seems, there is NO Internet connection :(",
+	"no-internet-btn": "Reload",
+
+	"menu-logout": "Logout",
+	"menu-phone": "Phone",
+	"menu-lang": "Language",
+	"menu-orders": "Orders",
+	"menu-wallet": "Wallet",
+	"menu-leaderboard": "Leaderboard",
+	"menu-support": "Підтримка",
+	"menu-about": "About app",
+	"menu-mode": "Courier mode",
+
+	"c-processing": "In process",
+	"c-nearest": "Nearest",
+	"c-no-orders-desc": "You have no orders.",
+
+	"no-wallet-desc": "You have no completed deliveries.",
+	"wallet-deliveries": "{{count}} deliveries",
+
+	"back-btn": "Back",
+	"edit-btn": "Edit",
+	"accept-btn": "Accept",
+	"done-btn": "Done",
+	"direct-title": "Direction",
+	"size-title2": "Size",
+	"cost-title": "Price",
+	"delete-btn": "Delete",
+	"decline-btn": "Cancel",
+	"share-btn": "Share",
+
+	"d-confirm-title": "Are you sure?",
+	"d-confirm-y": "Yes",
+	"d-confirm-n": "No",
+
+	"add-img-title": "Add image from",
+	"camera-btn": "Camera",
+	"gallery-btn": "Gallery",
+
+	"splash-title": "Who you are?",
+	"splash-1": "Costumer",
+	"splash-1-desc": "",
+	"splash-2": "Courier",
+	"splash-2-desc": ""
+
+}

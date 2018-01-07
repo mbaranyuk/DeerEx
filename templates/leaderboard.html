@@ -1,0 +1,21 @@
+<ion-view>
+	<div class="bar bar-header">
+		<button class="button button-icon icon ion-android-menu" ng-click="openMenu()"></button>
+		<button class="button button-icon icon ion-android-star yellow" style="position: absolute; right: 70px;"></button>
+		<button class="button button-icon icon ion-cube white"></button>
+	</div>
+
+	<ion-content scroll="true" class="has-header leaderboard">
+		<div ng-repeat="c in couriers">
+			<span class="counter white" ng-if="!c.pos">{{$index+1}}</span>
+			<span class="counter white" ng-if="c.pos"><b>{{c.pos == 0 ? $index+1 : c.pos}}</b></span>
+
+			<div class="item item-avatar custom-item">
+				<img src="img/venkman.jpg">
+				<span class="white name">{{c.pos ? me.nick : c.name}}</span>
+				<span class="item-note white" style="position: absolute; right: 82px;">{{c.rate}}</span>
+				<span class="item-note white">{{c.orders_done}}</span>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
